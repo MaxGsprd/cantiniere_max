@@ -1,0 +1,12 @@
+<p>login works!</p>
+
+<form class="form">
+        <label for="email">Email</label>
+        <input [(ngModel)]="loginFormData.email" name="email" type="text">
+
+
+        <label for="password">Password</label>
+        <input [(ngModel)]="loginFormData.password" name="password" type="password">
+
+    <button (click)="login()" type="button">Login</button>
+</form>
