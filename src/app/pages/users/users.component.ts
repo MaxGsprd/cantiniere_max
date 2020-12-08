@@ -14,7 +14,7 @@ export class UsersComponent implements OnInit {
   }
   
   getUsers() {
-    this.usersService.getEvents().subscribe( data => console.log(data))
+    this.usersService.getEvents().subscribe( data => console.log(data.body))
   }
 
 }
