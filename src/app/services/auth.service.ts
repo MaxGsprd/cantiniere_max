@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -13,6 +13,10 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) { }
 
   login(loginFormData: any) :Observable<any>{
-    return this.http.post<any>(this._API_URL + "login", loginFormData);
+    return this.http.post<any>(this._API_URL + "login", loginFormData, {observe: "response"});
+  }
+
+  getToken() {
+    return localStorage.getItem('token');
   }
 }

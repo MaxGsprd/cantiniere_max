@@ -11,8 +11,10 @@ export class UsersComponent implements OnInit {
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
-    // this.usersService.getEvents().subscribe( data => console.log(data))
-    // TEST FUNC
+  }
+  
+  getUsers() {
+    this.usersService.getEvents().subscribe( data => console.log(data))
   }
 
 }

@@ -11,8 +11,8 @@ export class UsersService {
 
   constructor(private http :HttpClient) { }
 
-  //TEST FUNCTION
-  // getEvents() :Observable<any> {  
-  //   return this.http.get<any>(this._API_URL + 'menu/findallavailablefortoday');
-  // }
+  //TEST
+  getEvents() :Observable<any> {  
+    return this.http.get<any>(this._API_URL + 'user/findall', {observe: "response"});
+  }
 }

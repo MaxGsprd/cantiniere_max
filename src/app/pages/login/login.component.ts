@@ -20,10 +20,13 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this._auth.login(this.loginFormData)
+    let formatedData = this.loginFormData;
+    this._auth.login(formatedData)
       .subscribe(
-        response => {
-          console.log(response);
+        (response) => {
+          console.log(response.headers.get('Authorization'))
+          let token = response.headers.get('Authorization')
+          localStorage.setItem('token', token)
         },
         error => {
           console.log(error);
