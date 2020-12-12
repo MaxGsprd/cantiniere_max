@@ -12,7 +12,7 @@ export class UsersService {
   constructor(private http :HttpClient) { }
 
   //TEST
-  getEvents() :Observable<any> {  
+  getUsers() :Observable<any> {  
     return this.http.get<any>(this._API_URL + 'user/findall', {observe: "response"});
   }
 }
