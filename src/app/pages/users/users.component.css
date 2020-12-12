@@ -1,0 +1,19 @@
+.user-table {
+  display: flex;
+  justify-content: center;
+}
+table {
+  width: 80%;
+}
+
+.credit {
+  margin-left: 50%;
+  background-color: #cccccc61;
+  font-size: 0.8em;
+}
+
+.credit:hover {
+  background-color: #3f51b5;
+  color: #fff;
+}
+

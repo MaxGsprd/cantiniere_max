@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { UserRecap } from '../models/UserRecap';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,6 @@ export class UsersService {
   constructor(private http :HttpClient) { }
 
   getUsers() :Observable<any> {  
-    return this.http.get<any>(this._API_URL + 'user/findall', {observe: "response"});
+    return this.http.get<UserRecap[]>(this._API_URL + 'user/findall', {observe: "response"});
   }
 }

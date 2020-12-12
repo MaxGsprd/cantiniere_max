@@ -22,7 +22,7 @@ export class AuthService {
   // decode jwt token 
   decodeToken(token: string) {
     let decodedToken :any = jwtDecode<JwtPayload>(token);
-    console.log(decodedToken);
+    // console.log(decodedToken);
     return decodedToken;
   }
 
@@ -30,19 +30,4 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
-  // check isLunchLady value in token
-  // isLunchLady() :boolean {
-  //   //retreive token
-  //   let tok :any = this.getToken();
-
-  //   if (tok) {
-  //     //decode token
-  //     let isAdmin = this.decodeToken(tok).user.isLuchLady;
-  //     console.log('isAdmin :', isAdmin );
-  //     // check if luchlady is true | false, then return val
-  //     return this.decodeToken(tok).user.isLuchLady ? true : false;
-  //   } else {
-  //     return false;
-  //   }
-  //}
 }
