@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
-import  jwtDecode , {JwtPayload } from 'jwt-decode';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,7 +14,7 @@ export class LoginComponent implements OnInit {
     "password":null
   };
 
-  isLunchlady :boolean = false;
+  isLunchLady :boolean = false;
 
   constructor(private _auth: AuthService, private router: Router) { }
 
@@ -33,15 +32,14 @@ export class LoginComponent implements OnInit {
           console.log(token);
 
           // token decoding 
-          let decodedToken :any = jwtDecode<JwtPayload>(token);
-          console.log(decodedToken);
+          let decodedToken = this._auth.decodeToken(token)
 
           // storing token
           localStorage.setItem('token', token);
 
           // check if isLunchlady 
-          this.isLunchlady = decodedToken.user.isLunchLady ? true : false;
-          if (this.isLunchlady) {
+          this.isLunchLady = decodedToken.user.isLunchLady ? true : false;
+          if (this.isLunchLady) {
             this.router.navigate(['/admin']);
           }
           
