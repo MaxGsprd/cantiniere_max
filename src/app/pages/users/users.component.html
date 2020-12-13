@@ -23,9 +23,9 @@
         <ng-container  matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef></th>
           <td mat-cell *matCellDef="let element">
-                <span class="hidden">{{element.id}}</span>
-                {{element.id}}
-               <button mat-button class='credit' (click)="openDialog(element.id)">Créditer</button>
+              <span class="hidden">{{element.id}}</span>
+              <button mat-button class='credit' (click)="creditUser(element.id)">Créditer</button>
+              <button mat-button class='debit' (click)="debitUser(element.id)">Débiter</button>
             </td>
         </ng-container>
       

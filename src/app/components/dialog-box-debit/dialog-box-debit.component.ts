@@ -2,13 +2,14 @@ import { Component, OnInit, Inject} from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-dialog-box-credit',
-  templateUrl: './dialog-box-credit.component.html',
-  styleUrls: ['./dialog-box-credit.component.css']
+  selector: 'app-dialog-box-debit',
+  templateUrl: './dialog-box-debit.component.html',
+  styleUrls: ['./dialog-box-debit.component.css']
 })
-export class DialogBoxCreditComponent implements OnInit {
+export class DialogBoxDebitComponent implements OnInit {
 
-  creditAmount: string = "";  
+  debitAmount: string = "";  
+
   //allow dialog box to receive data
   constructor(
     @Inject(MAT_DIALOG_DATA) public data:any) { }

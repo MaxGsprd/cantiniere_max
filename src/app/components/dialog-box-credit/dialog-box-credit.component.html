@@ -1,9 +1,8 @@
 <h2 mat-dialog-title>Quel montant souhaitez vous créditer ?</h2>
 <mat-form-field>
     <mat-label>montant en €</mat-label>
-    <input matInput [(ngModel)]="creditAmount">
+    <input required matInput [(ngModel)]="creditAmount">
 </mat-form-field>
-<mat-dialog-content>{{data.userId}}</mat-dialog-content>
 <div mat-dialog-actions>
-    <button mat-raised-button mat-dialog-close mat-dialog-close='{{creditAmount}}' (click)="test()">Valider</button>
+    <button mat-raised-button mat-dialog-close mat-dialog-close='{{creditAmount}}'>Valider</button>
 </div>

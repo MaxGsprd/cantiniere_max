@@ -20,3 +20,15 @@ table {
 .hidden {
   display: none;
 }
+
+.debit {
+  background-color: #cccccc61;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.debit:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
