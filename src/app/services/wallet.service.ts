@@ -16,7 +16,7 @@ export class WalletService {
     return this.http.post<any>(`${this._API_URL}/credit/${id}?amount=${parsedAmount}`, {});
   }
 
-  debitUser(id:number, amount: string) :Observable<any> {
+  debitUser(id:number, amount: any) :Observable<any> {
     let parsedAmount = parseInt(amount)
     return this.http.post<any>(`${this._API_URL}/debit/${id}?amount=${parsedAmount}`, {});
   }
