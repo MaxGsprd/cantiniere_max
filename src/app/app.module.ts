@@ -18,12 +18,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
+import {MatDialogModule} from "@angular/material/dialog";
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UsersComponent } from './pages/users/users.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { DialogBoxCreditComponent } from './components/dialog-box-credit/dialog-box-credit.component';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { AdminComponent } from './pages/admin/admin.component';
     HomeComponent,
     LoginComponent,
     UsersComponent,
-    AdminComponent
+    AdminComponent,
+    DialogBoxCreditComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { AdminComponent } from './pages/admin/admin.component';
     MatButtonModule,
     MatListModule,
     MatDividerModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]

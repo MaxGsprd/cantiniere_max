@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
           // token reception
           const token: string = response.headers.get('Authorization');
-          console.log(token);
+          // console.log(token);
 
           // token decoding 
           let decodedToken = this._auth.decodeToken(token)
